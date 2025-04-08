@@ -38,6 +38,21 @@ namespace BusinessLayer.Concrete
             return _portfollioDal.GetList();
         }
 
+        public List<Portfollio> TGetListByFilter(Func<Portfollio, bool> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Portfollio> TGetListByFilter()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Portfollio> TGetListByFilter(string p)
+        {
+            throw new NotImplementedException();
+        }
+
         public void TUpdate(Portfollio t)
         {
             _portfollioDal.Update(t);

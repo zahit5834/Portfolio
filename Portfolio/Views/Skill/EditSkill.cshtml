@@ -1,23 +1,24 @@
 ﻿@model EntityLayer.Concrete.Skill
 @{
     ViewData["Title"] = "EditSkill";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
-<div class="card-header border-0">
-    <h3 class="mb-0">Yetenek Güncelleme Sayfası</h3>
-    <br />
-</div>
-<div class="card-header border-0">
-    @using (Html.BeginForm("EditSkill", "Skill", FormMethod.Post))
-    {
-        @Html.HiddenFor(x => x.SkillID)
-        @Html.Label("Başlık")
-        @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
-        <br />
-        <label>Yetenek Değeri</label>
-        @Html.TextBoxFor(x => x.Value, new { @class = "form-control" })
-        <br />
-        <button type="submit" class="btn btn-success">Güncelle</button>
-    }
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Yetenek Düzenleme Sayfası</h4>
+            @using (Html.BeginForm("EditSkill", "Skill", FormMethod.Post))
+            {
+                @Html.HiddenFor(x => x.SkillID)
+                @Html.Label("Başlık")
+                @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                <br />
+                <label>Yetenek Değeri</label>
+                @Html.TextBoxFor(x => x.Value, new { @class = "form-control" })
+                <br />
+                <button type="submit" class="btn btn-success">Güncelle</button>
+            }
+        </div>
+    </div>
 </div>

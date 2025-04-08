@@ -13,6 +13,10 @@ namespace BusinessLayer.Concrete
     {
         IContactDal _contactDal;
 
+        public ContactManager()
+        {
+        }
+
         public ContactManager(IContactDal contactDal)
         {
             _contactDal = contactDal;
@@ -36,6 +40,21 @@ namespace BusinessLayer.Concrete
         public List<Contact> TGetList()
         {
             return _contactDal.GetList();
+        }
+
+        public List<Contact> TGetListByFilter(Func<Contact, bool> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Contact> TGetListByFilter()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Contact> TGetListByFilter(string p)
+        {
+            throw new NotImplementedException();
         }
 
         public void TUpdate(Contact t)

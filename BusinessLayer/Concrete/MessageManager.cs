@@ -39,6 +39,21 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
+        public List<Message> TGetListByFilter(Func<Message, bool> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Message> TGetListByFilter()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Message> TGetListByFilter(string p)
+        {
+            throw new NotImplementedException();
+        }
+
         public void TUpdate(Message t)
         {
             throw new NotImplementedException();

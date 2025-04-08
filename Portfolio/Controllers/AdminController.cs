@@ -28,5 +28,9 @@ namespace Portfolio.Controllers
         {
             return PartialView();
         }
+        public PartialViewResult NewPartialSideBar()
+        {
+            return PartialView();
+        }
     }
 }
